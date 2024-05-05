@@ -261,7 +261,7 @@
                         </div>
                         <!--end::Input group-->
                          <!--begin::Input group-->
-                         <div>
+                         <div class="mb-10">
                             <!--begin::Label-->
                             <label class="required form-label form-control-solid">About us Body Arabic</label>
                             <!--end::Label-->
@@ -274,6 +274,205 @@
                             <!--end::Description-->
                         </div>
                         <!--end::Input group-->
+
+
+   <!--begin::Input group-->
+   <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Goals Title English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_goals_title_en" class="form-control mb-2" placeholder="Our Goals Title English" value="{{ get_setting('our_goals_title_en') }}">
+    <input type="hidden" name="types[]" value="our_goals_title_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our goals tittle english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Goals Title Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_goals_title_ar" class="form-control mb-2" placeholder="Our Goals Title Arabic" value="{{ get_setting('our_goals_title_ar') }}">
+    <input type="hidden" name="types[]" value="our_goals_title_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our goals tittle arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+      <!--begin::Input group-->
+      <div class="mb-10">
+        <!--begin::Label-->
+        <label class="required form-label form-control-solid">Our Goals Body English</label>
+        <!--end::Label-->
+        <!--begin::Editor-->
+        <textarea class="required form-control" name="our_goals_body_en" value="{{get_setting('our_goals_body_en')}}" rows="20" >{{get_setting('our_goals_body_en')}}</textarea>
+        <input type="hidden" name="types[]" value="our_goals_body_en">
+        <!--end::Editor-->
+        <!--begin::Description-->
+        <div class="text-muted fs-7">Set a our goals body english for better visibility.</div>
+        <!--end::Description-->
+    </div>
+    <!--end::Input group-->
+
+      <!--begin::Input group-->
+      <div class="mb-10">
+        <!--begin::Label-->
+        <label class="required form-label form-control-solid">Our Goals Body Arabic</label>
+        <!--end::Label-->
+        <!--begin::Editor-->
+        <textarea class="required form-control" name="our_goals_body_ar" value="{{get_setting('our_goals_body_ar')}}" rows="20" >{{get_setting('our_goals_body_ar')}}</textarea>
+        <input type="hidden" name="types[]" value="our_goals_body_ar">
+        <!--end::Editor-->
+        <!--begin::Description-->
+        <div class="text-muted fs-7">Set a our goals body arabic for better visibility.</div>
+        <!--end::Description-->
+    </div>
+    <!--end::Input group-->
+
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision Title English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_title_en" class="form-control mb-2" placeholder="Our Vision Title English" value="{{ get_setting('our_vision_title_en') }}">
+    <input type="hidden" name="types[]" value="our_vision_title_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision tittle english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision Title Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_title_ar" class="form-control mb-2" placeholder="Our Vision Title Arabic" value="{{ get_setting('our_vision_title_ar') }}">
+    <input type="hidden" name="types[]" value="our_vision_title_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision tittle arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 1 English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_1_en" class="form-control mb-2" placeholder="Our Vision 1 English" value="{{ get_setting('our_vision_1_en') }}">
+    <input type="hidden" name="types[]" value="our_vision_1_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 1 english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 1 Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_1_ar" class="form-control mb-2" placeholder="Our Vision 1 Arabic" value="{{ get_setting('our_vision_1_ar') }}">
+    <input type="hidden" name="types[]" value="our_vision_1_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 1 arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 2 English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_2_en" class="form-control mb-2" placeholder="Our Vision 2 English" value="{{ get_setting('our_vision_2_en') }}">
+    <input type="hidden" name="types[]" value="our_vision_2_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 2 english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 2 Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_2_ar" class="form-control mb-2" placeholder="Our Vision 2 Arabic" value="{{ get_setting('our_vision_2_ar') }}">
+    <input type="hidden" name="types[]" value="our_vision_2_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 2 arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 3 English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_3_en" class="form-control mb-2" placeholder="Our Vision 3 English" value="{{ get_setting('our_vision_3_en') }}">
+    <input type="hidden" name="types[]" value="our_vision_3_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 3 english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Our Vision 3 Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="our_vision_3_ar" class="form-control mb-2" placeholder="Our Vision 3 Arabic" value="{{ get_setting('our_vision_3_ar') }}">
+    <input type="hidden" name="types[]" value="our_vision_3_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A our vision 3 arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+
+
+
                     </div>
                     <!--end::Card header-->
                 </div>

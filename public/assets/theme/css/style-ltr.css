@@ -28,3 +28,15 @@
 .footer4 .container{
     direction: ltr;
 }
+.features16 .container {
+    direction: ltr;
+}
+
+.features16 .container h6{
+    direction: ltr;
+    float: left;
+}
+.features16 .container p{
+    direction: ltr;
+    float: left;
+}

@@ -34,14 +34,14 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="mbr-section-title align-center mb-4 mbr-fonts-style display-2"><strong>رؤيتنــــا</strong></h3>
+                <h3 class="mbr-section-title align-center mb-4 mbr-fonts-style display-2"><strong>{{get_setting('our_vision_title_'.getLocale())}}</strong></h3>
             </div>
             <div class="card col-12 col-md-4 col-lg-2 p-3">
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-image-gallery mobi-mbri" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
                         <h4 class="card-title align-center mbr-black mbr-fonts-style display-7">
-                            <strong>رؤية 1</strong></h4>
+                            <strong>{{get_setting('our_vision_1_'.getLocale())}}</strong></h4>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>رؤية 2</strong></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong> {{get_setting('our_vision_2_'.getLocale())}}</strong></h4>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <span class="mbr-iconfont mobi-mbri-contact-form mobi-mbri" style="color: rgb(255, 255, 255); fill: rgb(255, 255, 255);"></span>
-                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong>رؤية 3</strong></h4>
+                        <h4 class="card-title align-center mbr-black mbr-fonts-style display-7"><strong> {{get_setting('our_vision_3_'.getLocale())}}</strong></h4>
                     </div>
                 </div>
             </div>
@@ -84,10 +84,10 @@
                 <div class="col-12 col-lg">
                     <div class="text-wrapper">
                         <h6 class="card-title mbr-fonts-style display-2" dir="rtl">
-                            <strong>أهدافنـا</strong></h6>
+                            <strong>{{get_setting('our_goals_title_'.getLocale())}}</strong></h6>
                         <p class="mbr-text mbr-fonts-style mb-4 display-4" dir="rtl">
-                            نص الاهداف هنا&nbsp;نص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنانص الاهداف هنا                                  </p>
-
+                            {{get_setting('our_goals_body_'.getLocale())}}
+                        </p>
                     </div>
                 </div>
             </div>

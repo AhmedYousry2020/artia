@@ -28,7 +28,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="index.html">
-                        <img src="assets/images/logo.svg" alt="ArteWebsite" style="height: 3.8rem;">
+                        <img src="{{asset('assets/images/logo.svg')}}" alt="ArteWebsite" style="height: 3.8rem;">
                     </a>
                 </span>
 
@@ -45,11 +45,11 @@
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/about-us">{{get_setting('about_us_'.getLocale())}}</a></li>
                     <li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle show display-4" href="index.html#team1-4" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">{{get_setting('services_'.getLocale())}}</a><div class="dropdown-menu show" aria-labelledby="dropdown-281" data-bs-popper="none">
                         @foreach($services as $service)
-                        <a class="text-black text-primary dropdown-item display-4" href="dental.html">{{$service->{'name_'.getLocale()} }}</a>
+                        <a class="text-black text-primary dropdown-item display-4" href="/service/{{$service->{'name_'.getLocale()} }}">{{$service->{'name_'.getLocale()} }}</a>
                         @endforeach
                     </div></li>
                     <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/doctors#slider3-7">{{get_setting('doctors_'.getLocale())}}</a>
-                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="consultations.html">{{get_setting('consultation_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/blogs"> {{get_setting('blogs_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#form5-r">{{get_setting('contact_us_'.getLocale())}}</a></li>
+                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/consultations">{{get_setting('consultation_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/blogs"> {{get_setting('blogs_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#form5-r">{{get_setting('contact_us_'.getLocale())}}</a></li>
                     <li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle show display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">{{__('general.English')}}</a><div class="dropdown-menu show" aria-labelledby="dropdown-281" data-bs-popper="none"><a class="text-black text-primary dropdown-item display-4" href="/change-language/en"> {{__('general.English')}}</a><a class="text-black text-primary dropdown-item display-4" href="/change-language/ar">{{__('general.Arabic')}}<br></a></div></li>
                 </ul>
 
@@ -74,7 +74,7 @@
             <div class="col-6 col-lg-3">
                 <div class="media-wrap col-md-12 col-12">
                     <a href="index.html">
-                        <img src="assets/images/logo.svg" alt="logo">
+                        <img src="{{asset('assets/images/logo.svg')}}" alt="logo">
                     </a>
                 </div>
             </div>
@@ -123,7 +123,7 @@
 
         </div>
     </div>
-</section><section><a href="https://mobiri.se"></a><a href="https://mobiri.se"></a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/embla/embla.min.js"></script>  <script src="assets/embla/script.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/formoid/formoid.min.js"></script>
+</section><section><a href="https://mobiri.se"></a><a href="https://mobiri.se"></a></section><script src="{{asset('assets/bootstrap/js/bootstrap.bundle.min.js')}}"></script>  <script src="{{asset('assets/parallax/jarallax.js')}}"></script>  <script src="{{asset('assets/smoothscroll/smooth-scroll.js')}}"></script>  <script src="{{asset('assets/ytplayer/index.js')}}"></script>  <script src="{{asset('assets/dropdown/js/navbar-dropdown.js')}}"></script>  <script src="{{asset('assets/embla/embla.min.js')}}"></script>  <script src="{{asset('assets/embla/script.js')}}"></script>  <script src="{{asset('assets/theme/js/script.js')}}"></script>  <script src="{{asset('assets/formoid/formoid.min.js')}}"></script>
 
 
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>

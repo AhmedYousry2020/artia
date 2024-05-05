@@ -62,6 +62,14 @@ class SiteController extends Controller
     return view('blogs');
    }
 
+   public function blog($name)
+   {
+    $lang = Session::get('lang', 'en');
+    app()->setLocale($lang);
+    $blog = Blog::where('title_'.getLocale(),'like',$name)->first();
+    return view('blog_details')->with('blog',$blog);
+   }
+
    public function reservation()
    {
     $lang = Session::get('lang', 'en');
@@ -74,6 +82,19 @@ class SiteController extends Controller
     $lang = Session::get('lang', 'en');
     app()->setLocale($lang);
     return view('services');
+   }
+   public function consultations()
+   {
+    $lang = Session::get('lang', 'en');
+    app()->setLocale($lang);
+    return view('consultations');
+   }
+   public function service($name)
+   {
+    $lang = Session::get('lang', 'en');
+    app()->setLocale($lang);
+    $service = Service::where('name_'.getLocale(),'like',$name)->first();
+    return view('service-details',compact('service'));
    }
 
 

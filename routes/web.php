@@ -22,7 +22,10 @@ Route::controller(SiteController::class)->group(function(){
     Route::get('/about-us','about');
     Route::get('/doctors','doctors');
     Route::get('/blogs','blogs');
+    Route::get('/blog/{name}','blog');
     Route::get('/services','services');
+    Route::get('/consultations','consultations');
+    Route::get('/service/{id}','service');
     Route::get('/reservation','reservation');
 
     Route::post('/contact-us','contactUs');

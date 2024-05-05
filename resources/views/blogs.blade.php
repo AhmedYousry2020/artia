@@ -29,49 +29,22 @@
 
     <div class="container">
         <div class="row justify-content-center">
+           @foreach($blogs as $blog)
             <div class="card col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="img-wrapper">
-                        <img src="assets/images/placeholder-688x459.png" alt="q">
+                        <img src="{{asset('storage/uploads/'.$blog->image)}}" alt="q">
                     </div>
                     <div class="card-box align-center">
 
-                        <h5 class="card-title mbr-fonts-style mb-3 display-5">عنوان المقالة الطبية</h5>
+                        <h5 class="card-title mbr-fonts-style mb-3 display-5">  {{$blog->{'title_'.getLocale()} }}</h5>
                         <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary-outline display-4" href="page5.html">اقراء المزيد</a></div>
+                            {{$blog->{'body_'.getLocale()} }} </p>
+                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary-outline display-4" href="/blog/{{$blog->{'title_'.getLocale()} }}">اقراء المزيد</a></div>
                     </div>
                 </div>
             </div>
-            <div class="card col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="img-wrapper">
-                        <img src="assets/images/placeholder-688x459.png" alt="q">
-                    </div>
-                    <div class="card-box align-center">
-
-                        <h5 class="card-title mbr-fonts-style mb-3 display-5">عنوان المقالة الطبية</h5>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary-outline display-4" href="page5.html">اقراء المزيد</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="card col-12 col-md-6 col-lg-4">
-                <div class="card-wrapper">
-                    <div class="img-wrapper">
-                        <img src="assets/images/placeholder-688x459.png" alt="q">
-                    </div>
-                    <div class="card-box align-center">
-
-                        <h5 class="card-title mbr-fonts-style mb-3 display-5">
-                            <strong>عنوان المقالة الطبية</strong></h5>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-4">
-                            Create multiple pages. Don't forget to set links to your pages after creating them.</p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-primary-outline display-4" href="page5.html">اقراء المزيد</a></div>
-                    </div>
-                </div>
-            </div>
+           @endforeach
 
         </div>
     </div>
