@@ -134,7 +134,7 @@
 																				<div class="menu-item p-0 m-0">
 																					<!--begin:Menu link-->
 																					<a href="/dashboard/settings/navbar_settings" class="menu-link">
-																						<span class="menu-title">Nabbar Content</span>
+																						<span class="menu-title">Navbar Content</span>
 																					</a>
 																					<!--end:Menu link-->
 																				</div>
@@ -249,7 +249,8 @@
 																			<!--end:Col-->
                                                                             <!--begin:Col-->
 																			<div class="col-lg-3 mb-6 mb-lg-0">
-																				<!--begin:Menu heading-->
+																				<div class="mb-6">
+                                                                                    <!--begin:Menu heading-->
 																				<h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Services</h4>
 																				<!--end:Menu heading-->
 																				<!--begin:Menu item-->
@@ -270,6 +271,20 @@
 																					<!--end:Menu link-->
 																				</div>
 																				<!--end:Menu item-->
+</div>
+<!--begin:Menu heading-->
+																				<h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Reservations</h4>
+																				<!--end:Menu heading-->
+																				<!--begin:Menu item-->
+																				<div class="menu-item p-0 m-0">
+																					<!--begin:Menu link-->
+																					<a href="{{route('dashboard.reservations.index')}}" class="menu-link">
+																						<span class="menu-title">Reservations</span>
+																					</a>
+																					<!--end:Menu link-->
+																				</div>
+																				<!--end:Menu item-->
+
 
 
 																			</div>

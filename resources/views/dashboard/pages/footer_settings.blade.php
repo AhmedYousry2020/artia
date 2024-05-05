@@ -270,6 +270,41 @@
                             <!--end::Description-->
                         <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
                         <!--end::Input group-->
+
+
+  <!--begin::Input group-->
+  <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Help Central Title English</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="help_central_title_en" class="form-control mb-2" placeholder="Help Central Title English" value="{{ get_setting('help_central_title_en') }}">
+    <input type="hidden" name="types[]" value="help_central_title_en">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A help central title english is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+<!--begin::Input group-->
+<div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Help Central Title Arabic</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="help_central_title_ar" class="form-control mb-2" placeholder="Help Central Title Arabic" value="{{ get_setting('help_central_title_ar') }}">
+    <input type="hidden" name="types[]" value="help_central_title_ar">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A help central title arabic is required and recommended to be unique.</div>
+    <!--end::Description-->
+<div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+<!--end::Input group-->
+
+
+
+
                            <!--begin::Input group-->
                            <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
                             <!--begin::Label-->

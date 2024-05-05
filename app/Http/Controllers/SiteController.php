@@ -4,32 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Http\Requests\ReserveRequest;
 use App\Models\Blog;
 use App\Models\Consultation;
 use App\Models\Doctor;
 use App\Models\Faqs;
+use App\Models\Reservation;
 use App\Models\Service;
 use App\Notifications\ContactUS;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\View;
 
 class SiteController extends Controller
 {
 
+    public function __construct()
+    {
+        View::share('consultations', Consultation::all());
+        View::share('doctors', Doctor::all());
+        View::share('blogs', Blog::all());
+        View::share('faqs', Faqs::all());
+        View::share('services', Service::all());
+
+    }
    public function index()
    {
     $lang = Session::get('lang', 'en');
     app()->setLocale($lang);
-
-    $blogs = Blog::all();
-    $consultations = Consultation::all();
-    $doctors = Doctor::all();
-    $faqs = Faqs::all();
-    $services = Service::all();
-
-    return view('index',compact('blogs','consultations','doctors','faqs','services'));
+    return view('index');
    }
    public function contact()
    {
@@ -65,7 +70,8 @@ class SiteController extends Controller
    }
 
    public function services()
-   {$lang = Session::get('lang', 'en');
+   {
+    $lang = Session::get('lang', 'en');
     app()->setLocale($lang);
     return view('services');
    }
@@ -82,5 +88,14 @@ class SiteController extends Controller
             $message->from($data['email'], $data['name']);
          });
         return redirect()->back()->with('success', __('general.Send Successfully'));
+   }
+   public function makeReserve(ReserveRequest $request)
+   {
+        $data = $request->validated();
+        $reservation = Reservation::create($data);
+
+        if($reservation){
+            return redirect()->back()->with('success', __('general.Send Successfully'));
+        }
    }
 }

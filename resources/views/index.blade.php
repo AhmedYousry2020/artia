@@ -11,12 +11,12 @@
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-12 col-lg-7">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-5"><br><br>لديك مشكلة؟</h1>
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-5"><br><br>{{get_setting('header_title_'.getLocale())}}</h1>
                 <h2 class="mbr-section-subtitle mbr-fonts-style mb-3 display-2">
-                        نحن خبراء في عمليات التجميل</h2>
+                    {{get_setting('header_title_2_'.getLocale())}}</h2>
                 <p class="mbr-text mbr-fonts-style display-7">
-                    إحجز استشارات الان</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-7" href="index.html"><span class="mobi-mbri mobi-mbri-bookmark mbr-iconfont mbr-iconfont-btn"></span>حجــــز إستشارة اونلاين</a></div>
+                    {{get_setting('header_title_3_'.getLocale())}}</p>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-7" href="/reservation"><span class="mobi-mbri mobi-mbri-bookmark mbr-iconfont mbr-iconfont-btn"></span>  {{get_setting('header_button_text_'.getLocale())}}</a></div>
             </div>
         </div>
     </div>
@@ -36,9 +36,11 @@
                 <div class="card-wrapper">
                     <div class="card-box align-center">
                         <h4 class="card-title mbr-fonts-style align-center mb-4 display-2">
-                            من نحن</h4>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-7"><br>مستشفى ارتية للتجميل و الجلدية و الاسنان هي مستشفى حديثة تقع في مدينة الرياض، المملكة العربية السعودية. تأسست المستشفى في عام 2022 من قبل مجموعة من الأطباء السعوديين المؤهلين تأهيلا عاليا.<br>...تتميز مستشفى ارتية بمرافقها الحديثة وفريقها الطبي المتخصص. تقدم المستشفى مجموعة واسعة من الخدمات التجميلية والجلدية والأسنان، بما في ذلك</p>
-                        <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="page3.html">اقراء المزيـــــــد</a></div>
+                             {{get_setting('about_us_title_'.getLocale())}}</h4>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                            {{get_setting('about_us_body_'.getLocale())}}
+                        </p>
+                            <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-4" href="page3.html">{{__('general.View More')}}</a></div>
                     </div>
                 </div>
             </div>
@@ -69,7 +71,7 @@
                         <p class="card-text mbr-fonts-style align-center display-7">
                             {{$service->{'description_'.getLocale()} }}
                         </p>
-                        <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-4" href="dental.html">اقراء المزيـــــــد</a></div>
+                        <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-4" href="dental.html"> {{__('general.View More')}}</a></div>
                     </div>
                 </div>
             </div>
@@ -221,32 +223,48 @@
     <div class="mbr-overlay"></div>
     <div class="container">
         <div class="mbr-section-head">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">تواصل معنا</h3>
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">{{get_setting('contact_us_'.getLocale())}}</h3>
 
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="3l56aS7HuoGI/BdyAWxcdv1+BYXTdLlBnGZebfVH6f+qTBcwXhdnAbpwQtW5XPeJNM0PVpf+JbmzjjokBKv+uqMAEv49HRUjw2Yj2t5zPR6EJ9UEWpw8QO8S9Mhz86pR">
+                <form action="/contact-us" method="post" class="mbr-form form-with-styler" data-form-title="Form Name">
+                    @csrf
+
                     <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">شكرا على مراسلتنا، سنقوم بالتواصل مهكم قريبا</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+                        @if (Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {!! Session::get('success') !!}
+                                    </div>
+                    @endif
                         </div>
                     </div>
                     <div class="dragArea row">
                         <div class="col-md col-sm-12 form-group mb-3" data-for="name">
-                            <input type="text" name="name" placeholder="الأســـــم" data-form-field="name" class="form-control" value="" id="name-form5-r">
+                            <input type="text" name="name" placeholder="{{__('general.Your name')}}" data-form-field="name" class="form-control @error('name') is-invalid @enderror">
+                            @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                         @enderror
                         </div>
                         <div class="col-md col-sm-12 form-group mb-3" data-for="email">
-                            <input type="email" name="email" placeholder="رقم الجـــوال" data-form-field="email" class="form-control" value="" id="email-form5-r">
+                            <input type="text" name="mobile" placeholder="{{__('general.Your mobile')}}" data-form-field="email" class="form-control @error('mobile') is-invalid @enderror">
+                            @error('mobile')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                         </div>
                         <div class="col-12 form-group mb-3" data-for="url">
-                            <input type="url" name="url" placeholder="البريـــد الإلكتروني" data-form-field="url" class="form-control" value="" id="url-form5-r">
+                            <input type="text" name="email" placeholder="{{__('general.Your email')}}" data-form-field="url" class="form-control @error('email') is-invalid @enderror" >
+                            @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                         </div>
                         <div class="col-12 form-group mb-3" data-for="textarea">
-                            <textarea name="textarea" placeholder="رسالتك هنا" data-form-field="textarea" class="form-control" id="textarea-form5-r"></textarea>
+                            <textarea name="message" placeholder="{{__('general.Your message')}}" data-form-field="textarea" class="form-control @error('message') is-invalid @enderror"></textarea>
+                            @error('message')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                             @enderror
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-secondary display-4">&nbsp; &nbsp; &nbsp; &nbsp;Send message&nbsp; &nbsp; &nbsp;&nbsp;</button></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-secondary display-4">{{__('general.SEND MESSAGE')}}</button></div>
                     </div>
                 </form>
             </div>

@@ -26,6 +26,7 @@ Route::controller(SiteController::class)->group(function(){
     Route::get('/reservation','reservation');
 
     Route::post('/contact-us','contactUs');
+    Route::post('/reserve','makeReserve');
 
 });
 

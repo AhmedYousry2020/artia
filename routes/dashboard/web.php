@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminControllers\AuthController;
 use App\Http\Controllers\AdminControllers\BlogController;
 use App\Http\Controllers\AdminControllers\FaqsController;
 use App\Http\Controllers\AdminControllers\HomeController;
+use App\Http\Controllers\AdminControllers\ReservationController;
 use App\Http\Controllers\AdminControllers\ServiceController;
 use App\Models\Doctor;
 use App\Models\Setting;
@@ -48,6 +49,8 @@ Route::prefix('dashboard')->middleware("authAdmin")->name('dashboard.')->group(f
     Route::resource('/doctors',DoctorController::class);
     Route::resource('/consultations',ConsultationController::class);
     Route::resource('/faqs',FaqsController::class);
+    Route::get('/reservations', [ReservationController::class,'index'])->name('reservations.index');
+
 
 });
 

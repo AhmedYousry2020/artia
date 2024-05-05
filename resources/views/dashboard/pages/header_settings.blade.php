@@ -302,14 +302,28 @@
                              <!--begin::Input group-->
                              <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
                                 <!--begin::Label-->
-                                <label class="required form-label form-control-solid">Header Button text</label>
+                                <label class="required form-label form-control-solid">Header Button Text English</label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input type="text" name="header_button_text" class="form-control mb-2" placeholder="Header Button text" value="{{ get_setting('header_button_text') }}">
-                                <input type="hidden" name="types[]" value="header_button_text">
+                                <input type="text" name="header_button_text_en" class="form-control mb-2" placeholder="Header Button Text English" value="{{ get_setting('header_button_text_en') }}">
+                                <input type="hidden" name="types[]" value="header_button_text_en">
                                 <!--end::Input-->
                                 <!--begin::Description-->
-                                <div class="text-muted fs-7">A Header Button text tittle is required and recommended to be unique.</div>
+                                <div class="text-muted fs-7">A Header Button text english is required and recommended to be unique.</div>
+                                <!--end::Description-->
+                            <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
+                            <!--end::Input group-->
+                               <!--begin::Input group-->
+                               <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+                                <!--begin::Label-->
+                                <label class="required form-label form-control-solid">Header Button Text Arabic</label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="text" name="header_button_text_ar" class="form-control mb-2" placeholder="Header Button Text Arabic" value="{{ get_setting('header_button_text_ar') }}">
+                                <input type="hidden" name="types[]" value="header_button_text_ar">
+                                <!--end::Input-->
+                                <!--begin::Description-->
+                                <div class="text-muted fs-7">A Header Button text arabic is required and recommended to be unique.</div>
                                 <!--end::Description-->
                             <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty"></div></div></div>
                             <!--end::Input group-->

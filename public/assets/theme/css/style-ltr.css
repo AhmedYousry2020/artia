@@ -6,11 +6,18 @@
     direction: rtl;
 
 }
+.header1 .container h1 {
+    direction: ltr;
+}
 
 .info3 .container{
     direction: ltr;
 }
 
+.info3 .container .mbr-text{
+    direction: ltr;
+
+}
 .info2 .container{
     direction: ltr;
 }
