@@ -1,0 +1,23 @@
+.navbar .container{
+    direction: ltr;
+}
+
+.header1 .container {
+    direction: rtl;
+
+}
+
+.info3 .container{
+    direction: ltr;
+}
+
+.info2 .container{
+    direction: ltr;
+}
+.form5 .container{
+    direction: ltr;
+}
+
+.footer4 .container{
+    direction: ltr;
+}
