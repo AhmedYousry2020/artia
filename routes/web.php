@@ -25,7 +25,9 @@ Route::controller(SiteController::class)->group(function(){
     Route::get('/blog/{name}','blog');
     Route::get('/services','services');
     Route::get('/consultations','consultations');
-    Route::get('/service/{id}','service');
+    Route::get('/service/{name}','service');
+    Route::get('/doctor/{name}','doctor');
+
     Route::get('/reservation','reservation');
 
     Route::post('/contact-us','contactUs');

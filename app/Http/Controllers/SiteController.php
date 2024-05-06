@@ -97,6 +97,13 @@ class SiteController extends Controller
     return view('service-details',compact('service'));
    }
 
+   public function doctor($name)
+   {
+    $lang = Session::get('lang', 'en');
+    app()->setLocale($lang);
+    $doctor = Doctor::where('name_'.getLocale(),'like',$name)->first();
+    return view('doctor-details',compact('doctor'));
+   }
 
    public function contactUs(ContactRequest $request)
    {

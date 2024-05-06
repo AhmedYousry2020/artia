@@ -17,9 +17,8 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $lang = Session::get('lang');
+        $lang = Session::get('lang','en');
         app()->setLocale($lang);
-
         $doctors = Doctor::all();
         return view('dashboard.pages.doctors.index',compact('doctors'));
     }
@@ -49,6 +48,13 @@ class DoctorController extends Controller
             "name_ar"=>"required|string",
             "description_en"=>'required',
             "description_ar"=>'required',
+            "educational_qualifications_en"=>'required',
+            "educational_qualifications_ar"=>'required',
+            "professional_experience_en"=>'required',
+            "professional_experience_ar"=>'required',
+            "certificate_en"=>'required',
+            "certificate_ar"=>'required',
+            "video"=>'required',
             "image"=>'required',
         ]);
         if($validator->fails()){
@@ -110,6 +116,13 @@ class DoctorController extends Controller
             "name_ar"=>"required|string",
             "description_en"=>'required',
             "description_ar"=>'required',
+            "educational_qualifications_en"=>'required',
+            "educational_qualifications_ar"=>'required',
+            "professional_experience_en"=>'required',
+            "professional_experience_ar"=>'required',
+            "certificate_en"=>'required',
+            "certificate_ar"=>'required',
+            "video"=>'required',
             "image"=>'nullable',
         ]);
         if($validator->fails()){

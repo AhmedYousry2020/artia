@@ -284,6 +284,134 @@
                                 @enderror
                             </div>
                             <!--end::Input group-->
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Educational QualificationS English</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="educational_qualifications_en"  rows="10" >{{$doctor->educational_qualifications_en}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a educational qualificationS english for better visibility.</div>
+    <!--end::Description-->
+    @error('educational_qualifications_en')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Educational QualificationS Arabic</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="educational_qualifications_ar"  rows="10" >{{$doctor->educational_qualifications_ar}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a educational qualificationS arabic for better visibility.</div>
+    <!--end::Description-->
+    @error('educational_qualifications_ar')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Professional Experience English</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="professional_experience_en"  rows="10" >{{$doctor->professional_experience_en}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a professional experience english for better visibility.</div>
+    <!--end::Description-->
+    @error('professional_experience_en')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Professional Experience Arabic</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="professional_experience_ar"  rows="10" >{{$doctor->professional_experience_ar}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a professional experience arabic for better visibility.</div>
+    <!--end::Description-->
+    @error('professional_experience_ar')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Certifications English</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="certificate_en"  rows="10" >{{$doctor->certificate_en}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a certifications english for better visibility.</div>
+    <!--end::Description-->
+    @error('certifications_en')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+
+ <!--begin::Input group-->
+ <div class="mb-10">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Certifications Arabic</label>
+    <!--end::Label-->
+    <!--begin::Editor-->
+    <textarea class="required form-control" name="certificate_ar"  rows="10" >{{$doctor->certificate_ar}}</textarea>
+    <!--end::Editor-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">Set a certifications arabic for better visibility.</div>
+    <!--end::Description-->
+    @error('certifications_ar')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+</div>
+<!--end::Input group-->
+
+
+  <!--begin::Input group-->
+  <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+    <!--begin::Label-->
+    <label class="required form-label form-control-solid">Doctor Video</label>
+    <!--end::Label-->
+    <!--begin::Input-->
+    <input type="text" name="video" class="form-control mb-2" value="{{$doctor->video}}" placeholder="Doctor Video">
+    <!--end::Input-->
+    <!--begin::Description-->
+    <div class="text-muted fs-7">A doctor video is required and recommended to be unique.</div>
+    <!--end::Description-->
+    @error('video')
+    <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+    @enderror
+
+</div>
+<!--end::Input group-->
+
                     </div>
                     <!--end::Card header-->
                 </div>
