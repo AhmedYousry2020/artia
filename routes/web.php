@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\TakkaController;
 use Illuminate\Support\Facades\Session;
 
 /*
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
+Route::get("/takka/{count}",[TakkaController::class, 'index'])->name("takka");
 
 Route::controller(SiteController::class)->group(function(){
     Route::get('/','index');
