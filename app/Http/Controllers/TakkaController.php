@@ -28,7 +28,16 @@ class TakkaController extends Controller
             $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments',$data),
             $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments',$data)
         ]);
-        dd($responses[0]->json());
+        dd($responses[0]->json()->data);
+        foreach ($responses as $response) {
+            if ($response->successful()) {
+                $responseBody = $response->json();
+                $codes[] = $responseBody;
+            } else {
+                Log::error("Error uploading image", [$response->json()]);
+            }
+        }
+
 //        return $responses[0]->ok() &&
 //            $responses[1]->ok() &&
 //            $responses[2]->ok();
