@@ -27,7 +27,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="index.html">
+                    <a href="./">
                         <img src="{{asset('assets/images/logo.svg')}}" alt="ArteWebsite" style="height: 3.8rem;">
                     </a>
                 </span>
@@ -42,18 +42,18 @@
                 </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/about-us">{{get_setting('about_us_'.getLocale())}}</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle show display-4" href="index.html#team1-4" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">{{get_setting('services_'.getLocale())}}</a><div class="dropdown-menu show" aria-labelledby="dropdown-281" data-bs-popper="none">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url('about-us')}}">{{get_setting('about_us_'.getLocale())}}</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle show display-4" href="{{url('./')}}#team1-4" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">{{get_setting('services_'.getLocale())}}</a><div class="dropdown-menu show" aria-labelledby="dropdown-281" data-bs-popper="none">
                         @foreach($services as $service)
-                        <a class="text-black text-primary dropdown-item display-4" href="/service/{{$service->{'name_'.getLocale()} }}">{{$service->{'name_'.getLocale()} }}</a>
+                        <a class="text-black text-primary dropdown-item display-4" href="{{url('service')}}/{{$service->{'name_'.getLocale()} }}">{{$service->{'name_'.getLocale()} }}</a>
                         @endforeach
                     </div></li>
-                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/doctors#slider3-7">{{get_setting('doctors_'.getLocale())}}</a>
-                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/consultations">{{get_setting('consultation_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/blogs"> {{get_setting('blogs_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#form5-r">{{get_setting('contact_us_'.getLocale())}}</a></li>
+                    <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url('doctors')}}#slider3-7">{{get_setting('doctors_'.getLocale())}}</a>
+                    </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url('consultations')}}">{{get_setting('consultation_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="{{url('blogs')}}"> {{get_setting('blogs_'.getLocale())}}</a></li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="./#form5-r">{{get_setting('contact_us_'.getLocale())}}</a></li>
                     <li class="nav-item dropdown"><a class="nav-link link text-black text-primary dropdown-toggle show display-4" href="" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="true">{{__('general.English')}}</a><div class="dropdown-menu show" aria-labelledby="dropdown-281" data-bs-popper="none"><a class="text-black text-primary dropdown-item display-4" href="/change-language/en"> {{__('general.English')}}</a><a class="text-black text-primary dropdown-item display-4" href="/change-language/ar">{{__('general.Arabic')}}<br></a></div></li>
                 </ul>
 
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-secondary display-4" href="/reservation">
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-secondary display-4" href="{{url('reservation')}}">
                           {{get_setting('header_button_text_'.getLocale())}}</a></div>
             </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="row mbr-white">
             <div class="col-6 col-lg-3">
                 <div class="media-wrap col-md-12 col-12">
-                    <a href="index.html">
+                    <a href="./">
                         <img src="{{asset('assets/images/logo.svg')}}" alt="logo">
                     </a>
                 </div>
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                     <div class="soc-item">
-                        <a href="index.html" target="_blank">
+                        <a href="./" target="_blank">
                             <span class="mbr-iconfont socicon-snapchat socicon"></span>
                         </a>
                     </div>
