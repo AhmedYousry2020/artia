@@ -28,7 +28,7 @@ class TakkaController extends Controller
             $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments',$data),
             $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments',$data)
         ]);
-        dd($responses[0]->json()->data);
+        dd($responses[0]->json()['data']);
         foreach ($responses as $response) {
             if ($response->successful()) {
                 $responseBody = $response->json();
