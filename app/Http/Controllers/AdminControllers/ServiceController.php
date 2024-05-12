@@ -17,7 +17,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $lang = Session::get('lang');
+        $lang = Session::get('lang', 'en');
         app()->setLocale($lang);
 
         $services = Service::all();
