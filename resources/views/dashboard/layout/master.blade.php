@@ -46,7 +46,7 @@
 							<!--end::Heaeder menu toggle-->
 							<!--begin::Header Logo-->
 							<div class="header-logo me-5 me-md-10 flex-grow-1 flex-lg-grow-0">
-								<a href="../../demo2/dist/index.html">
+								<a href="/dashboard">
 									<img alt="Logo" src="{{asset('dashboard-assets/media/logos/demo2.png')}}" class="logo-default h-25px" />
 									<img alt="Logo" src="{{asset('dashboard-assets/media/logos/demo2-sticky.png')}}" class="logo-sticky h-25px" />
 								</a>

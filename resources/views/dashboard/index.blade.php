@@ -293,7 +293,7 @@
 												<!--begin::Text-->
 												<div class="flex-grow-1">
 													<a href="{{route('dashboard.doctors.index')}}" class="text-dark fw-bold text-hover-primary fs-6">{{$doctor->{'name_'.getLocale()} }}</a>
-													<span class="text-muted d-block fw-bold">{{$doctor->{'description_'.getLocale()} }}</span>
+													<span class="text-muted d-block fw-bold">{{$doctor->{'speciality_'.getLocale()} }}</span>
 												</div>
 												<!--end::Text-->
 											</div>

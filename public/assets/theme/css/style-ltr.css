@@ -31,7 +31,9 @@
 .features16 .container {
     direction: ltr;
 }
-
+.service{
+    direction:ltr
+}
 .features16 .container h6{
     direction: ltr;
     float: left;

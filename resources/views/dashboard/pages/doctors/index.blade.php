@@ -15,7 +15,7 @@
             <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-white opacity-75">
-                    <a href="../../demo2/dist/index.html" class="text-white text-hover-primary">Home</a>
+                    <a href="/dashboard" class="text-white text-hover-primary">Home</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->
@@ -135,7 +135,7 @@
         <div id="kt_ecommerce_customer_addresses_{{$doctor->id}}" class="fs-6 ps-9 collapse" data-bs-parent="#kt_ecommerce_customer_addresses" style="">
             <!--begin::Details-->
             <div class="d-flex flex-column pb-5">
-                <div class="text-muted">{{$doctor->{'description_'.getLocale()} }}</div>
+                <div class="text-muted">{{$doctor->{'speciality_'.getLocale()} }}</div>
             </div>
             <!--end::Details-->
         </div>

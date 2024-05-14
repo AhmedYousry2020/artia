@@ -12,6 +12,7 @@ use App\Models\Faqs;
 use App\Models\Reservation;
 use App\Models\Service;
 use App\Notifications\ContactUS;
+use Cohensive\OEmbed\Facades\OEmbed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
@@ -93,7 +94,9 @@ class SiteController extends Controller
    {
     $lang = Session::get('lang', 'en');
     app()->setLocale($lang);
+
     $service = Service::where('name_'.getLocale(),'like',$name)->first();
+
     return view('service-details',compact('service'));
    }
 
@@ -101,8 +104,10 @@ class SiteController extends Controller
    {
     $lang = Session::get('lang', 'en');
     app()->setLocale($lang);
+
     $doctor = Doctor::where('name_'.getLocale(),'like',$name)->first();
-    return view('doctor-details',compact('doctor'));
+    $video = OEmbed::get($doctor->video)->html();
+        return view('doctor-details',compact('doctor', 'video'));
    }
 
    public function contactUs(ContactRequest $request)

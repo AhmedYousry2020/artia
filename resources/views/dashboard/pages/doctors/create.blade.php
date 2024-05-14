@@ -250,6 +250,43 @@
 
                             </div>
                             <!--end::Input group-->
+
+    <!--begin::Input group-->
+    <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+        <!--begin::Label-->
+        <label class="required form-label form-control-solid">Doctor Speciality English</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" name="speciality_en" class="form-control mb-2" placeholder="Doctor Speciality English">
+        <!--end::Input-->
+        <!--begin::Description-->
+        <div class="text-muted fs-7">A doctor speciality english is required and recommended to be unique.</div>
+        <!--end::Description-->
+        @error('speciality_en')
+        <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+        @enderror
+
+    </div>
+    <!--end::Input group-->
+     <!--begin::Input group-->
+     <div class="mb-10 fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-invalid">
+        <!--begin::Label-->
+        <label class="required form-label form-control-solid">Doctor Speciality Arabic</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" name="speciality_ar" class="form-control mb-2" placeholder="Doctor Speciality Arabic">
+        <!--end::Input-->
+        <!--begin::Description-->
+        <div class="text-muted fs-7">A doctor speciality arabic is required and recommended to be unique.</div>
+        <!--end::Description-->
+        @error('speciality_ar')
+        <div class="fv-plugins-message-container invalid-feedback"><div data-field="title" data-validator="notEmpty">{{$message}}</div> </div>
+        @enderror
+
+    </div>
+    <!--end::Input group-->
+
+
                         <!--begin::Input group-->
                         <div class="mb-10">
                             <!--begin::Label-->
