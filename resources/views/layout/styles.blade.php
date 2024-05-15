@@ -14,6 +14,7 @@
     .blog{
         margin-top: 40px;
     }
+
 </style>
 @if( app()->getLocale() == 'en')
 <link rel="stylesheet" href="{{asset('assets/theme/css/style-ltr.css')}}">
