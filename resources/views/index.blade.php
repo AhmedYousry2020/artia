@@ -71,7 +71,7 @@
                         <p class="card-text mbr-fonts-style align-center display-7">
                             {{$service->{'description_'.getLocale()} }}
                         </p>
-                        <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-4" href="dental.html"> {{__('general.View More')}}</a></div>
+                        <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-4" href="/service/{{$service->{'name_'.getLocale()} }}"> {{__('general.View More')}}</a></div>
                     </div>
                 </div>
             </div>
@@ -93,89 +93,37 @@
     </div>
     <div class="position-relative text-center">
         <div class="col-12">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">أطبــــــــائنا</h3>
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">{{get_setting('doctors_'.getLocale())}}</h3>
             <p class="mbr-section-subtitle mbr-fonts-style align-center mb-5 display-4">
-                نخبة من امهر الاطباء في مجالات التجميل و الجلدية و الاسنان نضع خبراتهم بين ايديكم</p>
+                {{__('general.doctors_title')}}</p>
         </div>
         <div class="embla" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play-interval="5" data-draggable="true">
             <div class="embla__viewport container">
                 <div class="embla__container">
+                    @foreach($doctors as $doctor)
                     <div class="embla__slide slider-image item active" style="margin-left: 1rem; margin-right: 1rem;">
                         <div class="card-wrap">
                             <div class="item-wrapper position-relative">
                                 <div class="image-wrap">
-                                    <img src="assets/images/istockphoto-1327592506-390x390.jpg" alt="Mobirise Website Builder">
+                                    <img src="{{asset('storage/uploads/'.$doctor->image)}}" alt="Mobirise Website Builder">
                                 </div>
                             </div>
                             <div class="content-wrap">
-                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">أسم الطبيب</h5>
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">{{$doctor->{'name_'.getLocale()} }}</h5>
                                 <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    التخصص
+                                    {{$doctor->{'speciality_'.getLocale()} }}
                                 </h6>
                                 <p class="card-text mbr-fonts-style align-center display-4">
-                                    نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب</p>
+                                    {{$doctor->{'description_'.getLocale()} }}
 
-                                <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-7" href="page1.html#header1-b">تعـــرف اكثر</a></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="card-wrap">
-                            <div class="item-wrapper position-relative">
-                                <div class="image-wrap">
-                                    <img src="assets/images/istockphoto-1327592506-390x390.jpg" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1">
-                                </div>
-                            </div>
-                            <div class="content-wrap">
-                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">أسم الطبيب</h5>
-                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    التخصص
-                                </h6>
-                                <p class="card-text mbr-fonts-style align-center display-4">
-                                    نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب
                                 </p>
 
-                                <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-7" href="page1.html#header1-b">تعـــرف اكثر</a></div>
+                                <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-7" href="/doctor/{{$doctor->{'name_'.getLocale()} }}">تعـــرف اكثر</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="card-wrap">
-                            <div class="item-wrapper position-relative">
-                                <div class="image-wrap">
-                                    <img src="assets/images/istockphoto-1327592506-390x390.jpg" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2">
-                                </div>
-                            </div>
-                            <div class="content-wrap">
-                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">أسم الطبيب</h5>
-                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    التخصص
-                                </h6>
-                                <p class="card-text mbr-fonts-style align-center display-7">نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب</p>
-
-                                <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-7" href="page1.html#header1-b">تعـــرف اكثر</a></div>
-                            </div>
-                        </div>
-                    </div><div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="card-wrap">
-                            <div class="item-wrapper position-relative">
-                                <div class="image-wrap">
-                                    <img src="assets/images/istockphoto-1327592506-390x390.jpg" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3">
-                                </div>
-                            </div>
-                            <div class="content-wrap">
-                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">أسم الطبيب</h5>
-                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4">
-                                    التخصص</h6>
-                                <p class="card-text mbr-fonts-style align-center display-4">
-                                    نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب، نبذة مختصرة عن الطبيب
-                                </p>
-
-                                <div class="mbr-section-btn card-btn align-center"><a class="btn btn-secondary display-7" href="page1.html#header1-b">تعـــرف اكثر</a></div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <button class="embla__button embla__button--prev">

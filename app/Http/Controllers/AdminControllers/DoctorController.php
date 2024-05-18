@@ -54,6 +54,8 @@ class DoctorController extends Controller
             "professional_experience_ar"=>'required',
             "certificate_en"=>'required',
             "certificate_ar"=>'required',
+            "speciality_ar"=>"required",
+            "speciality_en"=>"required",
             "video"=>'required',
             "image"=>'required',
         ]);
@@ -122,6 +124,8 @@ class DoctorController extends Controller
             "professional_experience_ar"=>'required',
             "certificate_en"=>'required',
             "certificate_ar"=>'required',
+            "speciality_ar"=>"required",
+            "speciality_en"=>"required",
             "video"=>'required',
             "image"=>'nullable',
         ]);

@@ -30,7 +30,7 @@
     <div class="container">
         <div class="row justify-content-center">
            @foreach($blogs as $blog)
-            <div class="card col-12 col-md-6 col-lg-4">
+            <div class="card col-12 col-md-6 col-lg-4 blog" >
                 <div class="card-wrapper">
                     <div class="img-wrapper">
                         <img src="{{asset('storage/uploads/'.$blog->image)}}" alt="q">

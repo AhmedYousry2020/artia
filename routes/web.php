@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Session;
 
 Route::get("/takka/{count}",[TakkaController::class, 'index'])->name("takka");
 
-Route::controller(SiteController::class)->group(function(){
+Route::middleware('landSwitch')->controller(SiteController::class)->group(function(){
     Route::get('/','index');
     Route::get('/contact','contact');
     Route::get('/about-us','about');
@@ -29,9 +29,7 @@ Route::controller(SiteController::class)->group(function(){
     Route::get('/consultations','consultations');
     Route::get('/service/{name}','service');
     Route::get('/doctor/{name}','doctor');
-
     Route::get('/reservation','reservation');
-
     Route::post('/contact-us','contactUs');
     Route::post('/reserve','makeReserve');
 

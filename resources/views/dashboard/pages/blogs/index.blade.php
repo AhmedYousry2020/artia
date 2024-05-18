@@ -15,7 +15,7 @@
             <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-1">
                 <!--begin::Item-->
                 <li class="breadcrumb-item text-white opacity-75">
-                    <a href="../../demo2/dist/index.html" class="text-white text-hover-primary">Home</a>
+                    <a href="/dashboard" class="text-white text-hover-primary">Home</a>
                 </li>
                 <!--end::Item-->
                 <!--begin::Item-->

@@ -12,6 +12,7 @@ use App\Models\Faqs;
 use App\Models\Reservation;
 use App\Models\Service;
 use App\Notifications\ContactUS;
+use Cohensive\OEmbed\Facades\OEmbed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Notification;
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\View;
 class SiteController extends Controller
 {
 
+
     public function __construct()
     {
         View::share('consultations', Consultation::all());
@@ -28,81 +30,59 @@ class SiteController extends Controller
         View::share('blogs', Blog::all());
         View::share('faqs', Faqs::all());
         View::share('services', Service::all());
-
     }
    public function index()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('index');
    }
    public function contact()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('contact');
    }
    public function about()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('about');
    }
    public function doctors()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('doctors');
    }
 
    public function blogs()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('blogs');
    }
 
    public function blog($name)
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     $blog = Blog::where('title_'.getLocale(),'like',$name)->first();
     return view('blog_details')->with('blog',$blog);
    }
 
    public function reservation()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('reservation');
    }
 
    public function services()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('services');
    }
    public function consultations()
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     return view('consultations');
    }
    public function service($name)
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     $service = Service::where('name_'.getLocale(),'like',$name)->first();
     return view('service-details',compact('service'));
    }
 
    public function doctor($name)
    {
-    $lang = Session::get('lang', 'en');
-    app()->setLocale($lang);
     $doctor = Doctor::where('name_'.getLocale(),'like',$name)->first();
-    return view('doctor-details',compact('doctor'));
+    $video = OEmbed::get($doctor->video)->html();
+        return view('doctor-details',compact('doctor', 'video'));
    }
 
    public function contactUs(ContactRequest $request)

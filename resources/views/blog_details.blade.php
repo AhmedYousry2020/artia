@@ -13,7 +13,7 @@
         <div class="row justify-content-end">
             <div class="col-12 col-lg-4">
 
-                <h2 class="mbr-section-subtitle mbr-fonts-style mb-3 display-2"><br>  {{$blog->{'title_'.getLocale()} }}: <br>ما تحتاج إلى معرفته
+                <h2 class="mbr-section-subtitle mbr-fonts-style mb-3 display-2"><br>  {{$blog->{'title_'.getLocale()} }}: <br>
 <div><br></div></h2>
 
 
@@ -31,7 +31,7 @@
         <div class="row justify-content-center">
             <div class="title col-md-12 col-lg-12">
 
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">{{$blog->{'title_'.getLocale()} }}: كل ما تحتاج إلى معرفته<br>
+                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-5">{{$blog->{'title_'.getLocale()} }}: <br>
 <div>
 </div><div>{{$blog->{'body_'.getLocale()} }}</div><br><div>
 </div></h4>

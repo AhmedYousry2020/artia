@@ -41,10 +41,10 @@
                         <h5 class="item-title mbr-fonts-style display-7">
                             <strong> {{$doctor->{'name_'.getLocale()} }}</strong></h5>
                         <h6 class="item-subtitle mbr-fonts-style mt-1 display-7">
-                            التخصص</h6>
+                            {{$doctor->{'speciality_'.getLocale()} }}</h6>
                         <p class="mbr-text mbr-fonts-style mt-3 display-7">  {{$doctor->{'description_'.getLocale()} }} </p>
                     </div>
-                    <div class="mbr-section-btn item-footer mt-2"><a href="page2.html#header1-j" class="btn item-btn btn-secondary display-7" target="_blank">تعرف على المزيد</a></div>
+                    <div class="mbr-section-btn item-footer mt-2"><a href="/doctor/{{$doctor->{'name_'.getLocale()} }}" class="btn item-btn btn-secondary display-7" target="_blank">تعرف على المزيد</a></div>
                 </div>
             </div>
             @endforeach

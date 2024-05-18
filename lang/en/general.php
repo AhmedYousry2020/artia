@@ -15,7 +15,7 @@ return [
     "subject"=>"Subject",
     "View More"=>'View More',
     'Send Successfully'=>'Send Successfully',
-
+    "doctors_title"=>"An elite group of the most skilled doctors in the fields of cosmetics, dermatology, and dentistry. We put their expertise in your hands",
     'email-required' => 'The email field is required',
 'mobile-required' => 'The mobile field is required',
 'subject-required' => 'The subject field is required',

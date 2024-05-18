@@ -10,7 +10,12 @@
 <link href="{{asset('assets/fonts/style.css')}}" rel="stylesheet">
 <link rel="preload" as="style" href="{{asset('assets/mobirise/css/mbr-additional.css')}}">
 <link rel="stylesheet" href="{{asset('assets/mobirise/css/mbr-additional.css')}}" type="text/css">
+<style>
+    .blog{
+        margin-top: 40px;
+    }
 
+</style>
 @if( app()->getLocale() == 'en')
 <link rel="stylesheet" href="{{asset('assets/theme/css/style-ltr.css')}}">
 @endif
