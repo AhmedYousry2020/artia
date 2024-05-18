@@ -42,10 +42,13 @@ class TakkaController extends Controller
         try {
 
             $callback = function (Pool $pool) use ($count,$headers,$data) {
-                $promises = array_fill(0, $count, $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data));
+                $promises = [];
+                for ($i=0 ; $i < $count ;$i++){
+                    $promises[] = $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data);
+                }
                 return $promises;
             };
-
+            //dd($callback);
             $responses = Http::pool($callback);
 
 
