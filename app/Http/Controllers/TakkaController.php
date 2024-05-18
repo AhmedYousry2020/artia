@@ -59,6 +59,8 @@ class TakkaController extends Controller
                     $codes[] = $responseBody['data'];
                 } else {
                     //Log::error("Error uploading image", [$response->json()]);
+                    return response()->json(['success' => false,'message'=>$response->json(),"codes"=>[],"count"=>0]);
+
                 }
             }
             return response()->json(['success' => true,"codes"=>$codes,"count"=>count($codes)]);
