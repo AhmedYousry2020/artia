@@ -32,18 +32,30 @@ class TakkaController extends Controller
             "voucher_code"=>$request->voucher_code
         ];
 
-        //$request_hup = array_fill(0, $count, $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data));
+//        $request_hup = array_fill(0, $count, $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data));
+//        $responses = Http::pool(fn(Pool $pool) =>[
+//            $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data),
+//            $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data),
+//            $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data)
+//        ]
+//        );
         try {
-            $responses = Http::pool(fn(Pool $pool) =>
-                array_fill(0, $count, $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data))
-            );
+
+            $callback = function (Pool $pool) use ($count,$headers,$data) {
+                $promises = array_fill(0, $count, $pool->withHeaders($headers)->post('https://dev-api.takka-pay.com/api/v2/cashcall/payments', $data));
+                return $promises;
+            };
+
+            $responses = Http::pool($callback);
+
+
         //dd($responses);
             foreach ($responses as $response) {
                 if ($response->successful()) {
                     $responseBody = $response->json();
                     $codes[] = $responseBody['data'];
                 } else {
-                    Log::error("Error uploading image", [$response->json()]);
+                    //Log::error("Error uploading image", [$response->json()]);
                 }
             }
             return response()->json(['success' => true,"codes"=>$codes,"count"=>count($codes)]);
