@@ -33,7 +33,7 @@
             <div class="card col-12 col-md-6 col-lg-4 blog" >
                 <div class="card-wrapper">
                     <div class="img-wrapper">
-                        <img src="{{asset('storage/uploads/'.$blog->image)}}" alt="q">
+                        <img src="{{asset('uploads/'.$blog->image)}}" alt="q">
                     </div>
                     <div class="card-box align-center">
 

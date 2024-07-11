@@ -35,7 +35,7 @@
             <div class="item features-image сol-12 col-md-6 col-lg-3">
                 <div class="item-wrapper">
                     <div class="item-img">
-                        <img src="{{asset('storage/uploads/'.$doctor->image)}}" alt="doc">
+                        <img src="{{asset('uploads/'.$doctor->image)}}" alt="doc">
                     </div>
                     <div class="item-content">
                         <h5 class="item-title mbr-fonts-style display-7">

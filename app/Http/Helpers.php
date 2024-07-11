@@ -17,7 +17,9 @@ if (!function_exists('storeImage')) {
   {
       $file_extension = $photo->getClientOriginalExtension();
       $file_name = Str::uuid() . '.' . $file_extension;
-      $saved = $photo->storeAs($folder, $file_name, ['disk' => 'public']);
+
+    //   $saved = $photo->storeAs($folder, $file_name, ['disk' => 'public']);
+      $saved = $photo->move(public_path('uploads'), $file_name);
       if ($saved) {
           return $file_name;
       }

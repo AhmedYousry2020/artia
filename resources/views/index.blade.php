@@ -63,7 +63,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="{{asset('/storage/uploads/'.$service->image)}}" alt="dental">
+                        <img src="{{asset('uploads/'.$service->image)}}" alt="dental">
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"><strong> {{$service->{'name_'.getLocale()} }}</strong></h5>
@@ -105,7 +105,7 @@
                         <div class="card-wrap">
                             <div class="item-wrapper position-relative">
                                 <div class="image-wrap">
-                                    <img src="{{asset('storage/uploads/'.$doctor->image)}}" alt="Mobirise Website Builder">
+                                    <img src="{{asset('uploads/'.$doctor->image)}}" alt="Mobirise Website Builder">
                                 </div>
                             </div>
                             <div class="content-wrap">

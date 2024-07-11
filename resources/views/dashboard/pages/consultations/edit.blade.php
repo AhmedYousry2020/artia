@@ -152,7 +152,7 @@
                     <div class="card-body text-center pt-0">
                         <!--begin::Image input-->
                         <!--begin::Image input placeholder-->
-                        <style>.image-input-placeholder { background-image: url("{{ $consultation->image ? asset('storage/uploads/'.$consultation->image) : asset('dashboard-assets/media/svg/files/blank-image.svg')}}"); } [data-bs-theme="dark"] .image-input-placeholder { background-image: url("{{asset('dashboard-assets/media/svg/files/blank-image-dark.svg')}}"); }</style>
+                        <style>.image-input-placeholder { background-image: url("{{ $consultation->image ? asset('uploads/'.$consultation->image) : asset('dashboard-assets/media/svg/files/blank-image.svg')}}"); } [data-bs-theme="dark"] .image-input-placeholder { background-image: url("{{asset('dashboard-assets/media/svg/files/blank-image-dark.svg')}}"); }</style>
                         <!--end::Image input placeholder-->
                         <!--begin::Image input-->
                         <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3" data-kt-image-input="true">

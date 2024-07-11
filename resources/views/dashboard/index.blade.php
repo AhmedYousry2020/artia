@@ -287,7 +287,7 @@
 											<div class="d-flex align-items-center mb-7">
 												<!--begin::Avatar-->
 												<div class="symbol symbol-50px me-5">
-													<img src="{{asset('storage/uploads/'.$doctor->image)}}" class="" alt="" />
+													<img src="{{asset('uploads/'.$doctor->image)}}" class="" alt="" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Text-->
@@ -430,7 +430,7 @@
 												<!--begin::Symbol-->
 												<div class="symbol symbol-50px me-5">
 													<span class="symbol-label">
-														<img src="{{asset('storage/uploads/'.$blog->image)}}" class="h-50 align-self-center" alt="" />
+														<img src="{{asset('uploads/'.$blog->image)}}" class="h-50 align-self-center" alt="" />
 													</span>
 												</div>
 												<!--end::Symbol-->

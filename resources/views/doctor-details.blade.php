@@ -36,7 +36,7 @@
             <div class="col-sm-6 col-lg-4">
                 <div class="card-wrap">
                     <div class="image-wrap">
-                        <img src="{{asset('storage/uploads/'.$doctor->image)}}" alt="profile">
+                        <img src="{{asset('uploads/'.$doctor->image)}}" alt="profile">
                     </div>
                     <div class="content-wrap">
                         <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5">
