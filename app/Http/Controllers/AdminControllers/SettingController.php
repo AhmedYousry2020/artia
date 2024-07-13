@@ -29,7 +29,7 @@ class SettingController extends Controller
                 $setting_name = '';
                 if($request->hasFile($request[$type]))
                 {
-                    $request[$type] = storeImage($request[$type],'/uploads');
+                    $request[$type] = $this->storeImage($request[$type],'/uploads');
                 }
                 if ($settings != null) {
                     $setting_val = $request[$type];

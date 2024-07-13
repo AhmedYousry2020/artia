@@ -59,7 +59,7 @@ class ServiceController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
        }
        $service = Service::create($requestAll);
 
@@ -119,7 +119,7 @@ class ServiceController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
        }
        if($service->update($requestAll)){
         return response()->json(['success' => true, 'redirect' => route('dashboard.services.index')]);
