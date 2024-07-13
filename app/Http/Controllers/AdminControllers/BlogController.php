@@ -57,7 +57,7 @@ class BlogController extends Controller
        $requestAll = $validator->validated();
         if($request->hasFile('image'))
         {
-            $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+            $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
         }
 
        $Blog = Blog::create($requestAll);
@@ -116,7 +116,7 @@ class BlogController extends Controller
         $requestAll = $validator->validated();
         if($request->hasFile('image'))
         {
-            $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+            $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
         }
        if($blog->update($requestAll)){
         return response()->json(['success' => true, 'redirect' => route('dashboard.blogs.index')]);

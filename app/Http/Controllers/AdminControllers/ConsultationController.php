@@ -59,7 +59,7 @@ class ConsultationController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
        }
        $consultation = Consultation::create($requestAll);
 
@@ -119,7 +119,7 @@ class ConsultationController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
        }
        if($Consultation->update($requestAll)){
         return response()->json(['success' => true, 'redirect' => route('dashboard.consultations.index')]);

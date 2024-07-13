@@ -67,7 +67,7 @@ class DoctorController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
        }
 
        $doctor = Doctor::create($requestAll);
@@ -137,7 +137,7 @@ class DoctorController extends Controller
        $requestAll = $validator->validated();
        if($request->hasFile('image'))
        {
-           $requestAll['image'] = $this->storeImage($requestAll['image'], '/uploads');
+           $requestAll['image'] = storeImage($requestAll['image'], '/uploads');
        }
        if($doctor->update($requestAll)){
         return response()->json(['success' => true, 'redirect' => route('dashboard.doctors.index')]);
