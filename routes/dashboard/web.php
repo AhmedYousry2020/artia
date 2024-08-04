@@ -4,14 +4,17 @@ use App\Http\Controllers\AdminControllers\AboutController;
 use App\Http\Controllers\AdminControllers\ConsultationController;
 use App\Http\Controllers\AdminControllers\DoctorController;
 use App\Http\Controllers\AdminControllers\SettingController;
+use App\Http\Controllers\AdminControllers\contactInfoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\AdminControllers\AuthController;
 use App\Http\Controllers\AdminControllers\BlogController;
 use App\Http\Controllers\AdminControllers\FaqsController;
 use App\Http\Controllers\AdminControllers\HomeController;
+use App\Http\Controllers\AdminControllers\JoinInfoController;
 use App\Http\Controllers\AdminControllers\ReservationController;
 use App\Http\Controllers\AdminControllers\ServiceController;
+use App\Http\Controllers\AdminControllers\SurveyController;
 use App\Models\Doctor;
 use App\Models\Setting;
 
@@ -50,7 +53,9 @@ Route::prefix('dashboard')->middleware("authAdmin")->name('dashboard.')->group(f
     Route::resource('/consultations',ConsultationController::class);
     Route::resource('/faqs',FaqsController::class);
     Route::get('/reservations', [ReservationController::class,'index'])->name('reservations.index');
-
+    Route::get('/contactInfo', [contactInfoController::class,'index'])->name('contactInfo.index');
+    Route::get('/joinInfo', [JoinInfoController::class,'index'])->name('joinInfo.index');
+    Route::get('/survey', [SurveyController::class,'index'])->name('survey.index');
 
 });
 

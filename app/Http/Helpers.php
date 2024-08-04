@@ -13,7 +13,7 @@ define('SL', strtoupper('ar'));
 
 
 if (!function_exists('storeImage')) {
-  function storeImage($photo, $folder)
+  function storeImage($photo)
   {
       $file_extension = $photo->getClientOriginalExtension();
       $file_name = Str::uuid() . '.' . $file_extension;
@@ -25,6 +25,20 @@ if (!function_exists('storeImage')) {
       }
   }
 }
+
+
+if (!function_exists('storeFile')) {
+    function storeFile($file)
+    {
+        $pdfFile = $file->getClientOriginalName();
+
+        $saved = $file->move(public_path('uploads/files'), $pdfFile);
+        if ($saved) {
+            return $pdfFile;
+        }
+    }
+  }
+
 
 if (!function_exists('getLocale')) {
     /**

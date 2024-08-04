@@ -4,13 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactRequest;
+use App\Http\Requests\JoinUsRequest;
 use App\Http\Requests\ReserveRequest;
+use App\Http\Requests\ServeyRequest;
+use App\Http\Requests\SurveyRequest;
 use App\Models\Blog;
 use App\Models\Consultation;
+use App\Models\ContactInfo;
 use App\Models\Doctor;
 use App\Models\Faqs;
+use App\Models\JoinUsInfo;
 use App\Models\Reservation;
 use App\Models\Service;
+use App\Models\Survey;
 use App\Notifications\ContactUS;
 use Cohensive\OEmbed\Facades\OEmbed;
 use Illuminate\Http\Request;
@@ -38,6 +44,14 @@ class SiteController extends Controller
    public function contact()
    {
     return view('contact');
+   }
+   public function survey()
+   {
+    return view('survey');
+   }
+   public function join_us()
+   {
+    return view('join-us');
    }
    public function about()
    {
@@ -88,13 +102,14 @@ class SiteController extends Controller
    public function contactUs(ContactRequest $request)
    {
         $data = $request->validated();
+        $contactData = ContactInfo::create($data);
         $users= [];
         $info = array('details'=>$data);
-        Mail::send('mail', $info , function($message) use ($data) {
-            $message->to('info@raus.sa', 'raus')->subject
-               ('New Message');
-            $message->from($data['email'], $data['name']);
-         });
+        // Mail::send('mail', $info , function($message) use ($data) {
+        //     $message->to('info@artia.sa', 'artia')->subject
+        //        ('New Message');
+        //     $message->from($data['email'], $data['name']);
+        //  });
         return redirect()->back()->with('success', __('general.Send Successfully'));
    }
    public function makeReserve(ReserveRequest $request)
@@ -106,4 +121,32 @@ class SiteController extends Controller
             return redirect()->back()->with('success', __('general.Send Successfully'));
         }
    }
+
+   public function makeSurvey(SurveyRequest $request)
+   {
+        $data = $request->validated();
+        $survey = [];
+        $keys=['Q1','Q2','Q3','Q4','Q5','Q6'];
+        array_push($survey,array_merge($data['survey1'],$data['survey2'],$data['survey3'],$data['survey4'],$data['survey5'],$data['survey6']));
+        $data['survey'] = json_encode(array_combine($keys, $survey[0]));
+        $survey = Survey::create($data);
+        if($survey){
+            return redirect()->back()->with('success', __('general.Send Successfully'));
+        }
+   }
+
+   public function joinUs(JoinUsRequest $request)
+   {
+        $data = $request->validated();
+        if($request->hasFile('cv'))
+        {
+            $data['cv'] = storeFile($data['cv']);
+        }
+        $joinUsInfo = JoinUsInfo::create($data);
+
+        if($joinUsInfo){
+            return redirect()->back()->with('success', __('general.Send Successfully'));
+        }
+   }
 }
+

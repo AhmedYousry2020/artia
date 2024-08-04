@@ -32,6 +32,10 @@ Route::middleware('landSwitch')->controller(SiteController::class)->group(functi
     Route::get('/reservation','reservation');
     Route::post('/contact-us','contactUs');
     Route::post('/reserve','makeReserve');
+    Route::post('/survey','makeSurvey');
+    Route::get('/survey','survey');
+    Route::get('/join-us','join_us');
+    Route::post('/join-us','joinUs');
 
 });
 

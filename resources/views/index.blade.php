@@ -147,19 +147,19 @@
         <div class="row justify-content-center">
             <div class="card col-12 col-lg-6">
                 <div class="wrapper">
-                    <h3 class="mbr-section-title mb-4 mbr-fonts-style display-5"><strong>إنظم الى اسرة ارتيه</strong></h3>
-                    <p class="mbr-text mb-4 mbr-fonts-style display-4" dir="rtl">
-                        تتشرّف مستشفى ارتيه بدعوتكم للانضمام إلى فريقنا المتميّز في خدمة الرعاية الصحية. نحن في مستشفى ارتيه نؤمن بأهمية بناء فريق قوي ومتحد، حيث يسعى كل فرد إلى تحقيق الرؤية والأهداف المشتركة. <br>إذا كنت تبحث عن فرصة للتطوّر والتقدم في مجال الطب والخدمات الصحية، فإننا نرحب بك لتكون جزءًا من عائلتنا في مستشفى ارتيه. انضم إلينا اليوم واستمتع ببيئة عمل محفّزة وفرص تطوير مهنيّة متميّزة.</p>
-                    <div class="mbr-section-btn"><a class="btn btn-white display-4" href="hiring.html">إستعراض الوظائف</a></div>
+                    <h3 class="mbr-section-title mb-4 mbr-fonts-style display-5"><strong>{{__('general.Join the Arteh family')}}</strong></h3>
+                    <p class="mbr-text mb-4 mbr-fonts-style display-4" dir="rtl">{{__('general.join us body')}}</p>
+                    <div class="mbr-section-btn"><a class="btn btn-white display-4" href="/join-us">{{__('general.join')}}</a></div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
                 <div class="wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5">
-                        <strong>رأيـــــــــــك يهمنا</strong></h3>
+                        <strong>{{__('general.Your opinion matters to us')}}</strong></h3>
                     <p class="mbr-text mbr-fonts-style mb-4 display-4" dir="rtl">
-                        نحن في مستشفى ارتيه نولي أهمية كبيرة لرأي عملائنا الكرام، ونسعى دائمًا لتقديم أفضل خدمة ممكنة. ندعوكم للمشاركة في استبيان جودة الخدمة لتحسين تجربتكم معنا. آراؤكم تسهم في تطوير الخدمات بجودة أعلى، ونثق تمامًا في قدرتكم على تقديم المقترحات لتحقيق أهدافنا. <br><br>شكرًا على وقتكم وجهودكم، نعمل بجدية على تنفيذ توصياتكم لتجربة أفضل لمرضانا.</p>
-                    <div class="mbr-section-btn"><a class="btn btn-white display-4" href="survey.html">الإستبيـــــــــــــان</a></div>
+                        {{__('general.survey body')}}
+                    </p>
+                    <div class="mbr-section-btn"><a class="btn btn-white display-4" href="/survey">{{__('general.survey')}}</a></div>
                 </div>
             </div>
         </div>
@@ -188,24 +188,37 @@
                         </div>
                     </div>
                     <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                        <div class="col-md-6 col-sm-12 form-group mb-3" data-for="name">
                             <input type="text" name="name" placeholder="{{__('general.Your name')}}" data-form-field="name" class="form-control @error('name') is-invalid @enderror">
                             @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                          @enderror
                         </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                        <div class="col-md-6 col-sm-12 form-group mb-3" data-for="email">
                             <input type="text" name="mobile" placeholder="{{__('general.Your mobile')}}" data-form-field="email" class="form-control @error('mobile') is-invalid @enderror">
                             @error('mobile')
                                             <div class="alert alert-danger">{{ $message }}</div>
                                         @enderror
                         </div>
-                        <div class="col-12 form-group mb-3" data-for="url">
-                            <input type="text" name="email" placeholder="{{__('general.Your email')}}" data-form-field="url" class="form-control @error('email') is-invalid @enderror" >
-                            @error('email')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                        </div>
+                            <div class="col-md-6 col-sm-12 form-group mb-3" data-for="url">
+                                <input type="text" name="email" placeholder="{{__('general.Your email')}}" data-form-field="url" class="form-control @error('email') is-invalid @enderror" >
+                                @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            </div>
+                            <div class="col-md-6 col-sm-12 form-group mb-3" data-for="url">
+                                <select name="section" class="form-control custom-select @error('section') is-invalid @enderror" >
+                                    <option value="">{{__('general.select')}}</option>
+                                    <option value="{{__('general.suggestion')}}">{{__('general.suggestion')}}</option>
+                                    <option value="{{__('general.enquiries')}}">{{__('general.enquiries')}}</option>
+                                    <option value="{{__('general.sales')}}">{{__('general.sales')}}</option>
+
+
+                                </select>
+                                @error('section')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            </div>
                         <div class="col-12 form-group mb-3" data-for="textarea">
                             <textarea name="message" placeholder="{{__('general.Your message')}}" data-form-field="textarea" class="form-control @error('message') is-invalid @enderror"></textarea>
                             @error('message')

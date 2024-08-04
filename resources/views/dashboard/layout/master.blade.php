@@ -284,8 +284,40 @@
 																					<!--end:Menu link-->
 																				</div>
 																				<!--end:Menu item-->
+                                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Contact Info</h4>
+																				<!--end:Menu heading-->
+																				<!--begin:Menu item-->
+																				<div class="menu-item p-0 m-0">
+																					<!--begin:Menu link-->
+																					<a href="{{route('dashboard.contactInfo.index')}}" class="menu-link">
+																						<span class="menu-title">Contact Info</span>
+																					</a>
+																					<!--end:Menu link-->
+																				</div>
+																				<!--end:Menu item-->
 
-
+                                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Join Us Info</h4>
+																				<!--end:Menu heading-->
+																				<!--begin:Menu item-->
+																				<div class="menu-item p-0 m-0">
+																					<!--begin:Menu link-->
+																					<a href="{{route('dashboard.joinInfo.index')}}" class="menu-link">
+																						<span class="menu-title">Join Us Info</span>
+																					</a>
+																					<!--end:Menu link-->
+																				</div>
+																				<!--end:Menu item-->
+                                                                                <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Survey Info</h4>
+																				<!--end:Menu heading-->
+																				<!--begin:Menu item-->
+																				<div class="menu-item p-0 m-0">
+																					<!--begin:Menu link-->
+																					<a href="{{route('dashboard.survey.index')}}" class="menu-link">
+																						<span class="menu-title">Survey Info</span>
+																					</a>
+																					<!--end:Menu link-->
+																				</div>
+																				<!--end:Menu item-->
 
 																			</div>
 																			<!--end:Col-->

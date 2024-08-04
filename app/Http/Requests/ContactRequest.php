@@ -28,8 +28,8 @@ class ContactRequest extends FormRequest
             'name'=>'required|string',
             'email'=>'required|email',
             'mobile'=>'required',
-            'subject'=>'required',
             'message'=>'required',
+            'section'=>'required'
         ];
     }
 
