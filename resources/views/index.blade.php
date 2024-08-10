@@ -1,26 +1,44 @@
 @extends('layout.master')
 @section('content')
-
-<section data-bs-version="5.1" class="header1 cid-tZiPZMdmjj mbr-parallax-background" id="header1-1">
-
-
-
-
-    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0);"></div>
-
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-12 col-lg-7">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-5"><br><br>{{get_setting('header_title_'.getLocale())}}</h1>
-                <h2 class="mbr-section-subtitle mbr-fonts-style mb-3 display-2">
-                    {{get_setting('header_title_2_'.getLocale())}}</h2>
-                <p class="mbr-text mbr-fonts-style display-7">
-                    {{get_setting('header_title_3_'.getLocale())}}</p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-secondary display-7" href="/reservation"><span class="mobi-mbri mobi-mbri-bookmark mbr-iconfont mbr-iconfont-btn"></span>  {{get_setting('header_button_text_'.getLocale())}}</a></div>
-            </div>
+<section id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('http://127.0.0.1:8000/assets/images/doctor-checking-patient-before-rhinoplasty-side-view.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="carousel-caption d-flex justify-content-center align-items-center">
+          <div>
+            <h1 class="display-5 animate__animated animate__delay-1s animate__fadeInUp">{{get_setting('header_title_'.getLocale())}}</h1>
+            <h2 class="display-2 animate__animated animate__delay-1s animate__fadeInUp"> {{get_setting('header_title_2_'.getLocale())}}</h2>
+            <p class="display-7 animate__animated animate__delay-1s animate__fadeInUp">{{get_setting('header_title_3_'.getLocale())}}</p>
+            <a class="btn btn-secondary display-7 animate__animated animate__delay-1s animate__fadeInUp" href="/reservation">
+              <span class="mobi-mbri mobi-mbri-bookmark mbr-iconfont mbr-iconfont-btn"></span> {{get_setting('header_button_text_'.getLocale())}}
+            </a>
+          </div>
         </div>
+      </div>
+      <!-- Add more carousel items here -->
+      <div class="carousel-item" style="background-image: url('http://127.0.0.1:8000/assets/images/img-staff-photo-cropped-10082020-scaled-e1615341302352-2000x970.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="carousel-caption d-flex justify-content-center align-items-center">
+          <div>
+
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('http://127.0.0.1:8000/assets/images/doctor-checking-patient-before-rhinoplasty-side-view.jpg'); background-size: cover; background-position: center; height: 100vh;">
+        <div class="carousel-caption d-flex justify-content-center align-items-center">
+          <div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
 
 <section data-bs-version="5.1" class="info3 cid-tZj04vorYy" id="info3-2">
 
